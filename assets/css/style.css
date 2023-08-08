@@ -35,18 +35,48 @@ body {
   background: var(--very-dark-blue-card-bg);
   width: 315px;
   height: auto;
+  border-radius: 10px;
 }
 .card__img {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
   width: 272px;
-  height: 272px;
-
-  background: var(--white);
-  margin: 22px 22px 0px 22px;
+  height: auto;
+  cursor: pointer;
+  margin: 22px 22px 22px 22px;
 }
+
+.equilibrium__img {
+  border-radius: 10px;
+  background: var(--white);
+}
+.view__img {
+  position: absolute;
+  background: var(--white);
+  display: none;
+  width: 30%;
+  height: 30%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+.view__img:active {
+  background: var(--white);
+  cursor: pointer;
+  display: block;
+  width: 272px;
+  height: auto;
+  opacity: 0.5;
+}
+
 .card__title {
   font-size: 20px;
   color: var(--white);
   margin: 22px 22px 0px 22px;
+  text-decoration: none;
 }
 .card__paragraph {
   color: var(--soft-blue);
@@ -60,10 +90,12 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 22px 22px 24px 22px;
+  border-bottom: 0.5px solid var(--very-dark-blue-line);
+  padding-bottom: 20px;
 }
 .paragraph__ethereum {
   font-size: 14px;
-  color: var(--soft-blue);
+  color: var(--white);
   margin-right: 8px;
 }
 .icon__ethereum {
@@ -96,9 +128,14 @@ body {
 .img__avatar {
   width: 31px;
   margin-right: 12px;
+  border-radius: 50%;
+  border: 1px solid var(--white);
 }
 
 .attribution {
+  margin-top: 10px;
+
+  color: var(--white);
   font-size: 11px;
   text-align: center;
 }
